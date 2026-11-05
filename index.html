@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#4b00d8">
+<title>JUST DANCE 2027 NEXT</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="video-layer" aria-hidden="true">
+  <video id="backgroundVideo" autoplay muted loop playsinline></video>
+  <div class="fallback-bg"></div>
+</div>
+<div class="vignette"></div>
+<main class="game-ui">
+  <aside class="nav-rail" aria-label="Navigation">
+    <div class="nav-icon">⌕</div><div class="nav-icon notification">♧</div>
+    <div class="nav-icon">⌂</div><div class="nav-icon">♫</div>
+    <div class="nav-icon">▣</div><div class="nav-icon nav-active">♙</div>
+    <div class="nav-icon">♜</div><div class="nav-icon">⚙</div>
+  </aside>
+
+  <section class="menu-stack" aria-label="Main menu">
+    <button class="menu-tile is-selected" data-index="0" data-name="Progression">
+      <img class="tile-base" src="assets/Rectangle 6.png" alt="">
+      <img class="tile-art progression-art" src="assets/Rectangle 5.png" alt="">
+      <span class="progress-badge"><span>50</span></span>
+      <span class="tile-copy"><strong>Progression</strong><small>Check your Goals, playstyle and<br> more!</small></span>
+      <img class="tile-glint" src="assets/Rectangle 8.png" alt="">
+    </button>
+    <button class="menu-tile" data-index="1" data-name="Locker Room">
+      <img class="tile-base" src="assets/Rectangle 6.png" alt="">
+      <img class="tile-art locker-art" src="assets/Rectangle 7.png" alt="">
+      <span class="locker-emblem"><i></i><b></b></span>
+      <span class="tile-copy"><strong>Locker Room</strong><small>Customize your Dancer Card<br> and more!</small></span>
+      <img class="tile-glint" src="assets/Rectangle 8.png" alt="">
+    </button>
+    <button class="menu-tile library-tile" data-index="2" data-name="Dancer Cards Library">
+      <img class="tile-base" src="assets/Rectangle 2.png" alt="">
+      <span class="library-emblem"><i>♙</i><i>＋</i></span>
+      <span class="tile-copy"><strong>Dancer Cards Library</strong></span>
+      <img class="tile-glint" src="assets/Rectangle 8.png" alt="">
+    </button>
+  </section>
+
+  <section class="dancer-stage" aria-label="Your dancer">
+    <div class="stage-ring"></div>
+    <div class="stage-glow"></div>
+    <img class="main-dancer" src="assets/dancer-avatar.png" alt="Current dancer avatar">
+    <div class="level-medallion">50</div>
+    <div class="player-name" id="playerName">cooper</div>
+    <div class="player-caption">:)</div>
+  </section>
+
+  <aside class="social-rail">
+    <div class="share-icon">✣</div>
+    <div class="mini-avatar"><img src="assets/dancer-avatar-head.png" alt=""></div>
+    <div class="add-icon">＋</div>
+  </aside>
+
+  <div class="ubisoft-connect"><span>◎</span> UBISOFT CONNECT</div>
+  <div class="username">Your Ubisoft username: <b>escooper</b></div>
+
+  <div class="dancer-cursor" id="dancerCursor" aria-hidden="true">
+    <img src="assets/dancer-avatar-head.png" alt="">
+    <span class="cursor-spark"></span>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <div class="audio-hint" id="audioHint">PRESS ANY KEY TO ENABLE MUSIC</div>
+  <audio id="menuMusic" loop preload="none"></audio>
+</main>
+<script src="app.js"></script>
+</body></html>
